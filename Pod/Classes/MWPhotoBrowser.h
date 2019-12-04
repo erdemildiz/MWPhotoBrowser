@@ -40,6 +40,7 @@
 
 @interface MWPhotoBrowser : UIViewController <UIScrollViewDelegate, UIActionSheetDelegate>
 
+@property (nonatomic, strong) NSMutableSet *visiblePages;
 @property (nonatomic, weak) IBOutlet id<MWPhotoBrowserDelegate> delegate;
 @property (nonatomic) BOOL zoomPhotosToFill;
 @property (nonatomic) BOOL displayNavArrows;
@@ -52,6 +53,7 @@
 @property (nonatomic) BOOL autoPlayOnAppear;
 @property (nonatomic) NSUInteger delayToHideElements;
 @property (nonatomic, readonly) NSUInteger currentIndex;
+@property (nonatomic, strong) NSMutableArray *photos;
 
 // Customise image selection icons as they are the only icons with a colour tint
 // Icon should be located in the app's main bundle
